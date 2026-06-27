@@ -241,10 +241,11 @@ if (isset($_GET['sitemap'])) {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
-                            'X-API-Key': token
+                            'Authorization': 'Bearer ' + token
                         },
                         body: JSON.stringify(doc)
                     });
+
                     
                     const resJson = await response.json();
                     
